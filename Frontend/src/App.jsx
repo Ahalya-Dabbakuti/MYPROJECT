@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./style.css";
-import config from "./config";
 
 const App = () => {
   const [employees, setEmployees] = useState([]);
@@ -16,7 +15,7 @@ const App = () => {
   const [fetchId, setFetchId] = useState("");
   const [fetchedEmployee, setFetchedEmployee] = useState(null);
 
-   const baseUrl = `${config.url}/employeeapi`;
+   const baseUrl = `${import.meta.env.VITE_API_URL}/employeeapi`;
 
   useEffect(() => {
     fetchAllEmployees();
