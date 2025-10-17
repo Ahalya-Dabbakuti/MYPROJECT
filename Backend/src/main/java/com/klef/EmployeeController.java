@@ -14,6 +14,11 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
+    @GetMapping("/")
+    public String Demo(){
+        return "Employee Full Stack Project"
+    }
+
     @GetMapping("/view")
     public List<EmployeeEntity> getAllEmployees() {
         return employeeService.getAllEmployees();
