@@ -16,7 +16,7 @@ public class EmployeeController {
 
     @GetMapping("/")
     public String Demo(){
-        return "Employee Full Stack Project"
+        return "Employee Full Stack Project";
     }
 
     @GetMapping("/view")
